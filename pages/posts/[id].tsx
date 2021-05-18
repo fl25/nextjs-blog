@@ -18,6 +18,11 @@ export default function Post({
     <Layout>
       <Head>
         <title>{postData.title}</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossOrigin="anonymous"></link>
+        <script type="module">
+            import renderMathInElement from "https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.mjs";
+            renderMathInElement(document.body);
+        </script>
       </Head>
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
